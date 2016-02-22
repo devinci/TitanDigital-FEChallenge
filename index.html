@@ -5,125 +5,224 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title></title>
-	
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="dist/css/main.min.css">	
-
-	<link type="text/html" href="https://www.google.com/fonts/specimen/Open+Sans">
-
-	<script src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<title>Titan Digital</title>
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="./dist/css/main.min.css">
+	<!-- Favicon -->	
+	<link rel="icon" type="image/png" href="./assets/images/favicon.png">
+	<!-- Open Sans Font -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<!-- Optional theme -->
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<!-- Country List JSON -->
+	<script type="text/javascript" src="./assets/scripts/json/countries.json"></script>
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
-<body>
-	<header id="header" class="">
-		<nav>
-			<ul>
-				<li>ATLAS TITAN</li>
-				<li><a href="" title="">VACANCIES</a></li>
-				<li><a href="" title="">SALES</a></li>
-				<li><a href="" title="">ABOUT</a></li>
-				<li><a href="" title="">HOME</a></li>
-			</ul>
-		</nav>
-		<h1>WELCOME TO ATLAS TITAN</h1>
-		<h5>An Original Brand</h5>
-		<div id="read-more" class="btn btn-lg">Read More</div>
-	</header><!-- /header -->
+	<body>
+		<header>
+			<!-- Navigation Row -->
+			<nav id="nav" class="row-nm">
+				<div id="atlas-titan"><h5>ATLAS TITAN</h5></div>
+				<div id="nav-menu">
+					<div id="home"><a class="btn" href="#header">HOME</a></div>
+					<div id="about"><a class="btn" href="#row1">ABOUT</a></div>
+					<!-- Dropdown Menu -->
+					<div id="sales" class="btn dropdown">
+						<div class="dropdown-toggle" data-toggle="dropdown">
+							SALES<span class="caret"></span>
+						</div>
+						<div id="drop-menu" class="dropdown-menu">						
+							<ul>
+								<li><a href="#sale1" class="btn">Item 1</a></li>
+								<li><a href="#sale2" class="btn">Item 2</a></li>
+								<li><a href="#sale3" class="btn">Item 3</a></li>
+								<li><a href="#sale4" class="btn">Item 4</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="vacancies"><a class="btn" href="#">VACANCIES</a></div>
+				</div>			
+			</nav>
+			<!-- Main Title Text -->
+			<div id="title-text">
+				<div>
+					<h1>WELCOME TO ATLAS TITAN</h1>
+					<h5>An Original Brand</h5>
+				</div>
+				<div id="read-more" class="btn btn-lg">Read More</div>
+			</div>
 
-	<section>
-		<div id="row1" class="row container-fluid">
-			<div class="col-md-6">
-				<h3 id="row1-col1">Lorem ipsum dolor, consectuer adipiscing.<br>Aenean <b>commodo ligula</b> eget dolor.</h3>
-			</div>
-			<div class="col-md-6">
-				<h4 id="row1-col2">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <a id="tooltip">Nulla consequat massa quis enim.</a>
-				</h4>
-			</div>
-		</div>
-	</section>
-	<section id="main-content">
-		<div class="row col-sm-8 col-md-8 col-lg-8">
-			<div id="row2" class="row">
-				<h2>
-					Read some of our <b>featured articles</b>
-				</h2>
-			</div>
-			<div id="row3" class="row">
-				<div id="accordian" class="">
-					<div class="btn btn-block">
-						<div>January 2016 <b>| Perth, Australia</b><span class="glyphicon glyphicon-plus"></span></div>
+		</header>
+		<!-- Main Content Area -->
+		<section id="main-row">
+			<!-- First Content Row -->
+			<div id="pre-content">
+				<div id="row-one" class="row-nm">
+					<div id="row-one-col-one">
+						<h3>
+							Lorem ipsum dolor, consectuer adipiscing.<br>Aenean <b>commodo ligula</b> eget dolor.
+						</h3>
 					</div>
-					<div class="btn btn-block">
-						<div>February 2015 <b>| Cape Town, South Africa</b><span class="glyphicon glyphicon-plus"></span></div>	
-					</div>
-					<div class="btn btn-block">
-						<div>March 2016 <b>| Mount Olympus</b><span class="glyphicon glyphicon-plus"></span></div>
+					<div id="row-one-col-two">
+						<h5>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+							<!-- Tooltip Popup -->
+							<a id="tooltip">Nulla consequat massa quis enim.</a>
+						</h5>
 					</div>
 				</div>
-				<div class="">
+			</div>
+			<!-- Second, Third, Fourth, Fifth Row Content -->
+			<div id="main-content">				
+				<div id="row-two" class="row-nm">
+					<h3>Read some of our <b>featured articles</b></h3>
+				</div>
+				<div id="row-three" class="row-nm">
+					<div id="row-three-col-one">
+						<!-- Accordian Menu -->
+						<div id="accordian" class="panel-group">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#collapse-one" aria-expanded="true"><div class="btn btn-block"><div>January 2016 <b>| Perth, Australia</b><div id="glyphs"><span id="glyph-plus" class="glyphicon glyphicon-plus"></span><span id="glyph-minus" class="glyphicon glyphicon-minus"></span></div></div></div></a>
+									</div>
+								</div>
+								<div id="collapse-one" class="panel-collapse collapse in">
+									<div id="acc-content" class="panel-body">
+										<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Natoque penatibus et magnis dis parturient dolor sit amet ligula eget dolor onsequat massa.
+										</p>
+										<p>
+										Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+										</p>
+									</div>
+								</div>
+								<div class="panel-heading">
+									<div class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#collapse-two" aria-expanded="false"><div class="btn btn-block"><div>February 2015 <b>| Cape Town, South Africa</b><div id="glyphs"><span id="glyph-plus" class="glyphicon glyphicon-plus"></span><span id="glyph-minus" class="glyphicon glyphicon-minus"></span></div></div></div></a>
+									</div>
+								</div>
+								<div id="collapse-two" class="panel-collapse collapse">
+									<div id="acc-content" class="panel-body">
+										<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Natoque penatibus et magnis dis parturient dolor sit amet ligula eget dolor onsequat massa.
+										</p>
+										<p>
+										Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+										</p>
+									</div>
+								</div>
+								<div class="panel-heading">
+									<div class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#collapse-three" aria-expanded="false"><div class="btn btn-block"><div>March 2016 <b>| Mount Olympus</b><div id="glyphs"><span id="glyph-plus" class="glyphicon glyphicon-plus"></span><span id="glyph-minus" class="glyphicon glyphicon-minus"></span></div></div></div></a>
+									</div>
+								</div>
+								<div id="collapse-three" class="panel-collapse collapse">
+									<div id="acc-content" class="panel-body">
+										<p>
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Natoque penatibus et magnis dis parturient dolor sit amet ligula eget dolor onsequat massa.
+										</p>
+										<p>
+										Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+					<!-- Row Three Image -->
+					<div id="row-three-col-two">
+						<div class="img-container">
+							<img src="./dist/images/postImg1.png" alt="">
+							<div class="caption">January 2016 <b>| Perth, Australia</b></div>
+						</div>
+					</div>
+				</div>
+				<!-- Row Four Images -->
+				<div id="row-four" class="row-nm">
+					<div id="row-four-col-one">
+						<div class="img-container">
+							<img src="dist/images/postImg2.png" alt="">
+							<div class="caption"><p>Cras eu blandit metus,<br> a Cape Town elementum.</p><p> by John Doe</p><p>Posted on 02-11-16</p></div>	
+						</div>
+					</div>
+					<div id="row-four-col-two">
+						<div class="img-container">
+							<img src="dist/images/postImg3.png" alt="">
+							<div class="caption">March 2016 <b>| Mount Olympus</b></div>
+						</div>
+					</div>
+				</div>
+				<div id="row-five">
+					<form class="form-inline">
+						<div class="form-group-sm">
+							<label id="mail-label" for="email"><h3>Subscribe to our <b> newsletter</b></h3></label>
+							<div class="input-group">
+								<input id="mail-input" type="email" name="email" value="" placeholder="Enter your e-mail address">
+								<div id="mail-btn" class="btn btn-lg input-group-addon">Subscribe</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- Main Footer Area -->
+		<footer>
+			<!-- First Footer -->
+			<div id="first-foot">
+				<div id="we-are-titans">
+					<h4><b>We Are Titans</b></h4>
+					<p>Consequuntur magni dolores atione voluptatem sequi nesc ue porro quisquam est, qui d sum quia dolor sit amet,cons sum quia sum quia</p>
+				</div>
+				<div id="contact">
+					<h4><b>Contact</b></h4>
 					<div>
-						<img class="img-responsive" src="dist/images/postImg1.png" alt="">
+						<p>www.atlastitan.dev</p>
+						<p>76 Regent Rd, Sea Point</p>
+						<p>e-mail@atlastital.com.au</p>
+						<!-- Click to Call -->
+						<p><a href="tel:+27214399030">+(27) 21 439 9030</a></p>
 					</div>
 				</div>
-			</div>
-			<div id="row4" class="row">
-				<div id="row4-col1" class="">
-					<img class="img-responsive" src="dist/images/postImg2.png" alt="">	
+				<!-- Country List From Ajax -->
+				<div id="country-info">
+					<h4><b>Location Information</b></h4>
+					<select id="country-list" class="btn btn-xs" name="" size="1">
+						<option value="">Select Your Country</option>					
+					</select>
+					<p id="country-text">“Ut eni et illi dolore magnam aliqua et aerat voluptatem.”</p>
 				</div>
-				<div id="row4-col2" class="">
-					<img class="img-responsive" src="dist/images/postImg3.png" alt="">
+				<div id="blogs">
+					<h4><b>Blog Catagories</b></h4>
+					<ul>
+						<li>General</li>
+						<li>Development</li>
+						<li>Sales</li>
+						<li>Appraisals</li>
+					</ul>
 				</div>
-
 			</div>
-			<div id="row5" class="row">
-				<form class="form-inline">
-					<div class="form-group-sm">
-						<label id="subscribe-label" for="subscribeMail" class="control-label"><h4>Subscibe to our <b>newsletter</b></h4></label>
-						<div class="input-group">
-							<input id="subscribe-mail" type="email" name="subscribe-mail" value="" class="form-control" placeholder="Enter your e-mail address">
-							<div id="subscribe-mail-btn" class="btn btn-lg input-group-addon">Subscribe</div>
-						</div>						
+			<!-- Second Footer -->
+			<div id="second-foot">
+				<div id="left-content">
+					<div>&copy; Quinns Real Estate, 2015
+						<br>
+						<a>Privacy Policy</a> | <a>Contact Us</a> | <a>Site Map</a>
 					</div>
-				</form>
+				</div>
+				<div id="right-content">
+					<div>Web Design by Titan Web</div>
+					<img src="dist/images/footerLogo.png" alt="">
+				</div>
 			</div>
-				
-		</div>
-		
-	</section>
-	<footer>
-		<div id="first-foot" class="row">
-			<div class="col-md-2">
-				<h5><b>We Are Titans</b></h5>
-				<p>Consequuntur magni dolores atione voluptatem sequi nesc ue porro quisquam est, qui d sum quia dolor sit amet,cons sum quia sum quia</p>
-			</div>
-			<div class="col-md-2">
-				<h5><b>Contact</b></h5>
-				<p>www.atlastitan.dev</p>
-				<p>76 Regent Rd, Sea Point</p>
-				<p>e-mail@atlastital.com.au</p>
-				<p>+(27) 21 439 9030</p>
-			</div>
-			<div class="col-md-2">
-				<h5><b>Location Information</b></h5>
-				<select id="country-list" class="btn btn-sm" name="" size="1">
-					<option value="">Select Your Country</option>					
-				</select>
-			</div>
-			<div class="col-md-2">
-				<h5><b>Blog Catagories</b></h5>
-				<ul>
-					<li>General</li>
-					<li>Development</li>
-					<li>Sales</li>
-					<li>Appraisals</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	<script src="dist/js/main.min.js"></script>
-</body>
+		</footer>
+		<!-- Main JS File -->	
+		<script type="text/javascript" src="./dist/js/main.min.js"></script>	
+	</body>	
 </html>

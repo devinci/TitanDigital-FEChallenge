@@ -1,178 +1,623 @@
-body, .row, #accordian {
-	padding: 0;
+html, body {
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;	
 }
+/* Sizing for Small Devices < 460px */
+@mixin font-fluid-sm {
+	
+	#nav #atlas-titan h5, #nav #nav-menu div a, #nav-menu div .dropdown-toggle {font-size: 1.8vw}
+	#title-text h1 {font-size: 5vw}
 
+	#row-one-col-one h3 {font-size:1.7vw}
+	#row-one-col-two h5 {font-size: 1.1vw; div .tooltip-inner {font-size: 1.1vw}}
+
+	#row-two h3 {font-size: 4.5vw}
+
+	#row-three {flex-wrap: wrap;}
+	#row-three-col-one {margin: 0 0 3vh 0; flex-basis: 100% !important}		
+	#row-three-col-two {flex-basis: 100% !important}	
+	.btn-block {font-size: 3.26vw}
+	#acc-content {font-size: 3vw}
+	#row-three-col-two .img-container .caption {font-size: 4vw}	
+
+	#row-four-col-one .img-container .caption {font-size: 1vw}
+	#row-four-col-two .img-container .caption {font-size: 3vw}
+
+	#mail-label h3 {font-size: 1.6vw}
+	#mail-input, #mail-btn  {font-size: 1vw;}
+
+	#first-foot h4 {font-size: 1.5vw}
+	#first-foot div:first-child {margin-left: 0}
+	#first-foot div:last-child {margin-right: 0}		
+	#first-foot div p {font-size: 1.4vw; margin: 0; display: flex; flex: 1; align-items: flex-end;}
+	#contact div {margin:0}		
+	#country-info {font-size: 1vw; width: 17vw}
+	#country-list {font-size: 1vw}
+	#blogs ul {font-size: 1.4vw; padding: 0 0 0 10px; margin:0; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+
+	#second-foot {font-size: 1vw; padding: 2vh 10vw}
+	#right-content img {width: 15vw}
+	
+}
+/* Sizing for Medium Devices 460px - 768px */
+@mixin font-fluid-md {
+
+	#nav #atlas-titan h5, #nav #nav-menu div a, #nav-menu div .dropdown-toggle {font-size: 1.8vw}
+	#title-text h1 {font-size: 5vw}
+
+	#row-one-col-one h3 {font-size:1.7vw}
+	#row-one-col-two h5 {font-size: 1.1vw; div .tooltip-inner {font-size: 1.1vw}}
+
+	#row-two h3 {font-size: 4.5vw}
+
+	#row-three {flex-wrap: wrap;}
+	#row-three-col-one {margin: 0 0 3vh 0; flex-basis: 100% !important}	
+	#acc-content p {margin: 0}	
+	#row-three-col-two {flex-basis: 100% !important}	
+
+	#mail-label h3 {font-size: 1.6vw}
+	#mail-input, #mail-btn  {font-size: 1vw;}
+
+	#first-foot h4 {font-size: 1.5vw}	
+	#first-foot div:first-child {margin-left: 0}
+	#first-foot div:last-child {margin-right: 0}	
+	#first-foot div p {font-size: 1.4vw; margin: 0; display: flex; flex: 1; align-items: flex-end;}
+	#contact div {margin:0}		
+	#country-info {font-size: 1vw; width: 17vw}
+	#country-list {font-size: 1vw}
+	#blogs ul {font-size: 1.4vw; padding: 0 0 0 10px; margin:0; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+
+	#second-foot {font-size: 1vw; padding: 2vh 10vw}
+	#right-content img {width: 15vw}
+	
+}
+/* Sizing for Large Devices 768px - 992px */
+@mixin font-fluid-lg {
+
+	#row-one-col-one h3 {font-size:1.8vw}
+	#row-one-col-two h5 {font-size: 1.1vw}
+
+	#row-three {flex-wrap: nowrap;}
+	#row-three-col-one {margin: 0 3vw 0 0; flex-basis: 60% !important}
+	.btn-block {font-size: 1.4vw}
+	#acc-content p {font-size: 1vw; margin: 0}	
+	#row-three-col-two {flex-basis: 30% !important}	
+
+	#mail-label h3 {font-size: 1.6vw}
+	#mail-input, #mail-btn  {font-size: 1vw; height: 5vh}
+
+	#first-foot h4 {font-size: 1vw}	
+	#first-foot div:first-child {margin-left: 0}
+	#first-foot div:last-child {margin-right: 0}	
+	#first-foot div p {font-size: 1vw; margin: 0; display: flex; flex: 1; align-items: flex-end;}
+	#contact div {margin:0}		
+	#country-info {font-size: 1vw; width: 17vw}
+	#country-list {font-size: 1vw}
+	#blogs ul {font-size: 1vw; padding: 0 0 0 10px; margin:0; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+
+	#second-foot {font-size: 0.8vw; padding: 4vh 10vw}
+	#right-content img {width: 10vw}
+	
+}
+/* Sizing for Larger Devices > 1200px  */
+@mixin font-fluid-xlg {
+	
+	#row-one-col-one h3 {font-size:21px}
+
+	#row-three {flex-wrap: nowrap;}
+	#row-three-col-one {margin: 0 3vw 0 0; flex-basis: 60% !important}
+	.btn-block {font-size: 20px}
+	#acc-content p {margin: 0}	
+	#row-three-col-two {flex-basis: 30% !important}	
+
+	#mail-input, #mail-btn  {font-size: 1vw; height: 5vh}
+	
+	#first-foot {padding: 10vh 10vw}
+	#first-foot div:first-child {margin-left: 0}
+	#first-foot div:last-child {margin-right: 0}	
+	#first-foot div p {margin: 0; display: flex; flex: 1; align-items: flex-end;}
+	#contact div {margin:0}		
+	#country-info { width: 17vw}
+	#blogs ul { padding: 0 0 0 10px; margin:0; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+
+	#second-foot {padding: 2vh 10vw}
+	#right-content img {width: 7vw}
+	
+}
+/* Including Sizing to Media Query Sizes */
+@mixin fluid-font {
+	@media (max-width: 460px) {
+		@include font-fluid-sm;
+	}
+	@media (min-width: 460px) and (max-width: 768px) {
+		@include font-fluid-md;
+	}
+	@media (min-width: 768px) and (max-width: 992px) {
+		@include font-fluid-md;		
+	}
+	@media (min-width: 992px) and (max-width: 1200px) {
+		@include font-fluid-lg;		
+ 	}
+ 	@media (min-width: 1200px) {
+		@include font-fluid-xlg;		
+ 	}
+}
+/* Mixin to call at section heads to implement sizing */
+@mixin fluid-text {
+	@include fluid-font;
+}
+/* Mixing to call flex */
+@mixin flex-display {
+	display: flex;
+	flex: 1;
+}
+/* Mixing for centered flex row */
+@mixin flex-display-row-center {
+	@include flex-display;
+	flex-direction: row;
+	justify-content: center;
+}
+/* Set Flex Display */
+header, section, footer {
+	@include flex-display;
+}
+/* No Margin Row Class */
+.row-nm {
+	@include flex-display;
+	flex-direction: row;
+	margin: 0;		
+}
+/* Header Styling - Flex, Include Fluid Text */
 header {
-	background: url("../images/headerBg.png") no-repeat;	
-	background-size: cover;	
-	min-height: 650px;
-	height: calc(100vh - 50vh);
-	h1, h5 {
-		text-align: center;		
-		color: white;		
-	}
-
-	h1 {
-		margin-top: 205px;
-	}
-
-	nav {
-		padding: 40px 10vw 0 10vw;
-		color: white;		
-		font-size: larger;
-		ul {
-			list-style: none;
-			li {
-				display: inline;
-				a {
-					text-align: right;
-					float: right;
-					margin: 0 20px 0 0;
+	@include flex-display;
+	@include fluid-text;
+	flex-direction: column;
+	/* Background Image */
+	background: url('../images/headerBg.png') no-repeat;
+	background-position: top center;
+	background-size: cover;
+	height: 74rem;
+	color: white;
+	padding: 5vh 10vw;
+	/* Nav Bar Styling - Flex */			
+	nav {	
+		@include flex-display;	
+		align-items: center;
+		#atlas-titan {
+			@include flex-display;				
+			justify-content: flex-start;
+			cursor: default;
+		}
+		/* Nav Menu - Flex */
+		#nav-menu {
+			@include flex-display;	
+			@include fluid-text;
+			justify-content: flex-end;
+			#sales {
+				&:focus {
+					border-bottom: 2px solid #b7c8d9;
+					border-radius: 0;
+				}
+				&:hover {
 					color: white;
-					flex-direction: row-reverse;
-					&:hover {
-						text-decoration: underline;
-						color: white;
+					border-bottom: 2px solid #b7c8d9;
+					border-radius: 0;
+					#drop-menu {
+						display: block;
+					}
+				}
+				.caret {
+					margin-left: 5px;
+				}
+				#drop-menu {
+					background-color: transparent;
+					min-width: 0;
+					box-shadow: none;
+					border: none;
+					ul {
+						list-style: none;
+						padding: 0;						
 					}
 				}
 			}
+			/* Color for Link States */
+			#home, #about, #sales, #vacancies {				
+				a {
+					color: white;
+				}
+				a:visited {
+					color: white;
+				}
+				a:focus, a:hover {
+					color: white;
+					border-bottom: 2px solid #b7c8d9;
+					border-radius: 0;
+				}
+			}			
+		}			
+	}
+	/* Title Text Styling */
+	#title-text {
+		@include flex-display;
+		flex-direction: column;
+		align-items: center;
+		div:first-child {
+			margin-top: 20rem;
+			cursor: default;
+			text-align: center;
+		}
+		/* Read More Button Styling */ 
+		#read-more {
+			padding: 2vh 6vw;
+			margin: 12em auto 0 auto;			
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			border: 2px solid white;
+			border-radius: 0;
+			color: white;
+			font-size: small;			
+			&:hover {
+				background-color: rgba(50,50,50,0.5);
+			}
+			&:active {
+				box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.5) inset;
+			}
+		}
+	}	
+}
+/* Main Row Styling - Flex, Include Fluid Text */
+#main-row {
+	@include fluid-text;
+	/* First Row - Page Title */
+	#pre-content {
+		@include flex-display;
+		flex-direction: row;
+		padding: 0 10vw;	
+		background-color: white;
+		min-height: 25.7rem;
+		#row-one {
+			padding: 5vh 0;
+			background-color: white;
+			align-items: center;
+			#row-one-col-one {
+				flex-basis: 50%;
+				h3 {
+					margin: 0;
+					margin-right: 5vw;
+				}			
+			}
+			#row-one-col-two {
+				flex-basis: 50%;
+				h5 {
+					max-width: 545px;
+					margin: 0;
+					/* Tooltip Underline */
+					#tooltip {
+						color: black;
+						border-bottom: 1px dotted black;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Main Content : Row Two through Five */
+	#main-content {
+		@include flex-display;
+		flex-direction: column;
+		padding: 0 10vw;	
+		background-color: #f3f3f3;
+		font-family: 'Open Sans', sans-serif;
+		/* Image Container */
+		.img-container {
+			position: relative;
+			display: flex;
+			flex: 1;
+		}
+		/* Image Caption Styling and Transition */
+		.caption {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			justify-content: center;
+			align-items: flex-end;
+			color: white;
+			background: linear-gradient(transparent 55%, rgba(0,0,0,0.5));
+			padding-bottom: 5%;					
+			transition: opacity 0.5s ease-in-out;
+		}
+		/* Row Two - Content Title */			
+		#row-two {
+			@include flex-display;
+			@include flex-display-row-center;
+			padding: 8vh 0 5vh 0;				
+		}
+		/* Row Three - Accordian & Img */
+		#row-three {
+			padding: 0 0 3vh 0;		
+			#row-three-col-one {
+				@include flex-display;	
+				/* Accordian */							
+				#accordian {
+					@include flex-display;
+					background-color: white;				
+					flex-direction: column;
+					margin: 0;
+					a {
+						@include flex-display;
+						text-decoration: none;
+					}
+					/* Glyph Visibility on Expanded - True/False */
+					a[aria-expanded='true'] {
+						#glyph-plus {
+							display: none;
+						}
+						#glyph-minus {
+							display: inline-block;
+						}
+					}
+					a[aria-expanded='false'] {
+						#glyph-plus {
+							display: inline-block;
+						}
+						#glyph-minus {
+							display: none;
+						}
+					}
+					/* Accordian Button Styling */				
+					.btn-block {
+						@include flex-display;					
+						text-align: left;
+						border-bottom: 1px solid #f3f3f3;					
+						border-radius: 0;
+						align-items: center;
+						&:hover {
+							background-color: #E8E8E8;
+							border: 1px solid grey;
+						}
+						div {
+							@include flex-display;
+							/* Glyph Style */
+							#glyphs {
+								@include flex-display;
+								justify-content: flex-end;	
+								margin-left: 2vw;						
+							}
+						}
+					}
+					/* Accordian Panel Style */
+					.panel, .panel-default, .panel-heading, .panel-title, .panel-body {
+						background-color: white;
+						padding: 0;
+						border-radius: 0;
+						border: none;
+						box-shadow: none;
+						display: flex;
+						flex-direction: column;
+						flex-grow: 1;
+					}
+					/* Accordian Content */
+					#acc-content {
+						border-bottom: 1px solid #f3f3f3;
+						p {
+							padding: 10px 10px;
+						}
+					}
+				}
+			}
+			/* Img */
+			#row-three-col-two {
+				@include flex-display;				
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				/* Hover for Caption */
+				&:hover {
+					.caption {	
+						transition: opacity 0.5s ease-in-out;
+						opacity: 1;		
+
+					}
+				}	
+			}
+		}
+		/* Row Four - Two Images */
+		#row-four {
+			padding: 0 0 10vh 0;		
+			#row-four-col-one {
+				@include flex-display;
+				flex-basis: 33.6%;
+				margin-right: 3vw;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				/* Hover for Caption */
+				.caption {
+					align-items: center;
+					text-align: center;
+					background: rgba(0,0,0, 0.7);
+					padding: 0 10%;
+					flex-direction: column;
+					/* Lighter Text */
+					p {
+						margin: 0;
+						&:nth-child(2) {
+							color: lightgrey;
+						}
+						&:nth-child(3) {
+							color: lightgrey;
+							padding-top: 12%;
+						}
+					}
+				}
+				&:hover {
+					.caption {	
+						transition: opacity 0.5s ease-in-out;
+						opacity: 1;												
+					}
+				}	
+			}
+			#row-four-col-two {
+				@include flex-display;
+				flex-basis: 70%;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				/* Hover for Caption */
+				.caption {
+					padding: 0 0 3% 3%;
+					justify-content: flex-start;
+				}
+				&:hover {
+					.caption {	
+						transition: opacity 0.5s ease-in-out;
+						opacity: 1;												
+					}
+				}	
+			}
+		}
+		/* Row Five - Subscribe Bar */
+		#row-five {
+			@include flex-display;
+			background-color: white;
+			justify-content: center;
+			margin-bottom: 8vh;
+			padding: 0 10vw;
+			/* Form Style */
+			form, .form-group-sm, .input-group {
+				@include flex-display;
+				margin: 0;
+			}
+			.form-group-sm {
+				height: 15vh;
+				align-items: center;
+			}
+			/* Form Label - Subscribe */
+			#mail-label {
+				align-items: center;
+				margin: 0;
+				h3 {
+					margin: 0;
+				}
+			}
+			/* Form Input & Button */
+			.input-group {
+				justify-content: center;							
+				#mail-input {
+					background-color: #f3f3f3;
+					border: 1px solid black;
+					border-radius: 0;
+					width: 20vw;					
+					padding-left: 1vw;
+					color: black;
+				}
+				#mail-btn {
+					display: flex;
+					background-color: #343638;
+					color: white;
+					border-radius: 0;
+					border: 1px solid black;
+					align-items: center;
+					justify-content: center;
+					width: 10vw;
+					&:hover {
+						background-color: #777;
+					}
+					&:active {
+						box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.5) inset;
+					}					
+				}
+			}
+		}
+	}			
+}
+/* Footer - Include Fluid Text */
+footer {
+	@include fluid-text;
+}
+/* First Footer Style */
+#first-foot {
+	@include flex-display;	
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 5vh 10vw;
+	color: #9e9e9e;	
+	/* Footer Titles */
+	h4 {
+		color: black;
+		font-weight: 600;
+		font-family: 'Open Sans';
+	}		
+	div {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		margin: 0 2vw;		
+	}
+	#we-are-titans {
+		p {
+			max-width: 256px;
+		}
+	}
+	/* Click to Call Color */
+	#contact {
+		a {
+			color: #9e9e9e;			
+		}
+	}
+	/* Location Information Style */
+	#country-info {
+		#country-list {
+			border: 1px solid #9e9e9e;
+			padding: 1vh 1vw;
+			color: black;
+		}
+		#country-text {
+			font-style: italic;
+			max-width: 256px;
+		}
+	}
+	/* List Item Pointer */
+	#blogs {
+		li {
+			cursor: pointer;
 		}		
 	}
 }
-
-#main-content {
-	background-color: #f3f3f3;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	#row2 {
-		text-align: center;
-		padding: 120px 0 70px 0;
-	}
-}
-
-#read-more {
-	display: table;
-	margin: 170px auto 0 auto;
-	padding-top: 15px;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.3);
-	border: 2px solid white;
-	border-radius: 0;
+/* Second Footer */
+#second-foot {
+	@include flex-display;
+	@include fluid-text;
+	background-color: #343638;
 	color: white;
-	font-size: small;
-	width: 200px;
-	height: 50px;
-}
-
-#row1 {
-	display: flex;
-	div {
-		display: flex;
-		flex: 1;
-	}
-}
-
-#row1-col1, #row1-col2 {
-	flex: 1;
-	margin: auto;
-	padding: 100px 0;
-	text-align: center;
-}
-
-#tooltip {
-	color: black;
-	border-bottom: 1px dotted;
-	cursor: pointer;
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-#row3 {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 40px;
-	#accordian {
-		background-color: white;
-		display: flex;		
-		flex-direction: column;
-		width: 100%;
-		margin-right: 40px;
-		.btn-block{
-			flex: 1;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			border-radius: 0;
-			border: none;
-			border-bottom: 1px solid #f3f3f3;
-			text-align: left;
-		}
-		.glyphicon {
-			float: right;
+	padding: 2vh 5vw;
+	#left-content {
+		@include flex-display;
+		justify-content: flex-start;
+		align-items: center;
+		a {
+			color: white;
 		}
 	}
-	img {
-		flex-basis: 30%;
-	}
-}
-
-#row4 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-bottom: 40px;
-	#row4-col1 {
-		margin-right: 40px;
-	}
-	#row4-col2 {
-		padding-left: 0;
-		float: right;
-	}
-}
-
-#row5 {
-	background-color: white;
-	display: flex;	
-	justify-content: center;
-	margin-bottom: 80px;
-	#subscribe-label {		
-		margin: 70px 70px 70px 0;
-	}
-	#subscribe-mail {
-		background-color: #f3f3f3;
-		border: 1px solid black;
-		border-radius: 0;
-		height: 50px;
-		width: 350px;
-	}
-	#subscribe-mail-btn {
-		background-color: #343638;
-		color: white;
-		border-radius: 0;
-		border: 1px solid black;
-		width: 150px;
-
-	}
-}
-
-#first-foot {
-	display: flex;
-	justify-content: center;
-	color: #9e9e9e;
-	b {
-		color: black;
-	}
-	ul  {
-		padding-left: 15px;
-		li {
-			font-size: smaller;
+	#right-content {
+		@include flex-display;
+		justify-content: flex-end;
+		align-items: center;
+		/* Logo Image */
+		img {
+			margin-left: 2vw;
 		}
 	}
-	p {
-		font-size: smaller;
-	}
-}
+}	

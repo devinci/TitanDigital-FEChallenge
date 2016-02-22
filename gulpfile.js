@@ -17,7 +17,7 @@ gulp.task("sass", function(){
 	log("Generate CSS files " + (new Date()).toString());
 	gulp.src(sassFiles)
 		.pipe(sass({ style: 'expanded' }))
-		.pipe(autoprefixer({ browsers: ["last 3 versions"]
+		.pipe(autoprefixer({ browsers: ["> 5%"]
 		}))				
 		.pipe(minifycss())
 		.pipe(rename('main.css'))
